@@ -52,7 +52,7 @@ focus_tree = {
 	focus = {
 		id = SIA_second_siamese_revolution
 		icon = GFX_goal_siam_kill_phibun
-		cost = 10
+		cost = 4
 		mutually_exclusive = {
 			focus = SIA_the_monarchist_cause
 			focus = SIA_consolidate_Khana_Ratsadon
@@ -93,7 +93,7 @@ focus_tree = {
 					has_country_flag = SIA_communist_victory
 				}
 			completion_reward = {
-					add_political_power = 50
+					add_political_power = 250
 				}
 				search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -109,6 +109,7 @@ focus_tree = {
 		x = 6
 		y = 2
 			completion_reward = {
+				add_manpower = 200000
 					add_ideas = SIA_revolutionary_republic
 				}
 				search_filters = {  FOCUS_FILTER_POLITICAL }
@@ -145,6 +146,7 @@ focus_tree = {
 		x = 1
 		y = 4
 			completion_reward = {
+					add_research_slot = 1
 					add_ideas = SIA_revolutionnary_education
 				}
 				search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
@@ -161,6 +163,7 @@ focus_tree = {
 		x = 2
 		y = 5
 			completion_reward = {
+					add_offsite_building = { type = industrial_complex level = 15 }
 					random_owned_controlled_state = {
 							limit = {
 									free_building_slots = {
@@ -184,10 +187,10 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 4
 							add_building_construction = {
 									type = industrial_complex
-									level = 1
+									level = 2
 									instant_build = yes
 								}
 						}
@@ -214,10 +217,10 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 2
 							add_building_construction = {
 									type = industrial_complex
-									level = 1
+									level = 2
 									instant_build = yes
 								}
 						}
@@ -244,10 +247,10 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 4
 							add_building_construction = {
 									type = industrial_complex
-									level = 1
+									level = 2
 									instant_build = yes
 								}
 						}
@@ -267,6 +270,7 @@ focus_tree = {
 			focus = SIA_revolutionnary_education
 		}
 		completion_reward = {
+
 					add_ideas = SIA_centralised_production
 				}
 				search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -301,7 +305,7 @@ focus_tree = {
 			focus = SIA_the_siamese_leap_forward
 		}
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.1
 			add_ideas = SIA_state_atheism
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
@@ -393,6 +397,7 @@ focus_tree = {
 		x = 11
 		y = 4
 			completion_reward = {
+				add_offsite_building = { type = industrial_complex level = 15 }
 					random_owned_controlled_state = {
 							limit = {
 									free_building_slots = {
@@ -416,7 +421,7 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 4
 						}
 					random_owned_controlled_state = {
 							limit = {
@@ -441,7 +446,7 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 4
 						}
 					random_owned_controlled_state = {
 							limit = {
@@ -466,7 +471,7 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 4
 						}
 				}
 				search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -507,6 +512,7 @@ focus_tree = {
 		x = 5
 		y = 4
 		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 10 }
 			custom_effect_tooltip = SIA_finding_allies_tooltip
 		}
 		search_filters = { FOCUS_FILTER_ALLIANCE }
@@ -1515,7 +1521,7 @@ focus_tree = {
 	focus = {
 		id = SIA_consolidate_Khana_Ratsadon
 		icon = GFX_goal_support_fascism
-		cost = 10
+		cost = 4
 		mutually_exclusive = {
 			focus = SIA_the_monarchist_cause
 			focus = SIA_second_siamese_revolution
@@ -1527,7 +1533,7 @@ focus_tree = {
 		y = 0
 			completion_reward = {
 					add_ideas = SIA_Luang_Wichitwathakan
-					add_political_power = 100
+					add_political_power = 300
 				}
 				search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1593,7 +1599,7 @@ focus_tree = {
 	focus = {
 		id = SIA_weaken_the_civilian_wing
 		icon = GFX_focus_LAT_suspend_constitution_of_latvia
-		cost = 10
+		cost = 4
 		prerequisite = {
 			focus = SIA_phibun_ascension
 		}
@@ -1633,8 +1639,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_weaken_the_civilian_wing
 			completion_reward = {
-					add_war_support = 0.15
-					add_stability = 0.05
+					add_war_support = 0.30
+					add_stability = 0.1
 				}
 				search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 
@@ -1673,6 +1679,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_phibun_ascension
 		completion_reward = {
+			add_offsite_building = { type = dockyard  level = 10 }
+			add_offsite_building = { type = arms_factory   level = 20 }
+			add_stability = -0.02
+			add_war_support = 0.10
+			add_manpower = 200000
+			
 			random_owned_controlled_state = {
 				prioritize = {
 					289
@@ -1699,7 +1711,7 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -1729,10 +1741,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1751,15 +1763,33 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_increase_the_military_budget
 		completion_reward = {
-			add_state_claim = 741
-			add_state_claim = 670
-			add_state_claim = 924
-			add_state_claim = 925
-			add_state_claim = 926
+			create_wargoal = {
+				type = take_core_state
+				target = FRI
+				generator = { 670 926 924 925 741 286 671}
+			}
+			create_wargoal = {
+				type = take_core_state
+				target = ENG
+				generator = { 336 }
+			}
+
+			add_state_core = 670
+			add_state_core = 926
+
+			add_state_core = 924
+			add_state_core = 925
+			add_state_core = 741
+
+			add_state_core = 286
+			add_state_core = 671
+
+			add_state_core = 336
+
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
+				cost_reduction = 0.75
+				uses = 4
 				category = land_doctrine
 			}
 		}
@@ -1849,6 +1879,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_pan_thai_propaganda
 		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 10 }
+			add_offsite_building = { type = fuel_silo level = 5 }
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -1872,10 +1904,10 @@ focus_tree = {
 						}
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -1999,7 +2031,7 @@ focus_tree = {
 	focus = {
 		id = SIA_end_the_depression
 		icon = GFX_goal_generic_deals
-		cost = 10
+		cost = 2
 		x = 46
 		y = 0
 		ai_will_do = {
@@ -2007,13 +2039,20 @@ focus_tree = {
 		}
 		completion_reward = {
 			remove_ideas = SIA_small_depression_effects
+			add_ideas = SIA_Resource_More
+			add_ideas = SIA_AgencyTH
+			add_offsite_building = { type = industrial_complex level = 15 }
+			add_offsite_building = { type = steel_mill  level = 5 }
+			add_offsite_building = { type = aluminum_mill  level = 5 }
+			add_offsite_building = { type = rubber_refinery  level = 5 }
+
 		}
 	}
 
 	focus = {
 		id = SIA_mechanization_of_agriculture
 		icon = GFX_goal_generic_production2
-		cost = 7
+		cost = 5
 		prerequisite = {
 			focus = SIA_end_the_depression
 		}
@@ -2021,7 +2060,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_end_the_depression
 			completion_reward = {
-				add_offsite_building = { type = industrial_complex level = 1 }
+				add_offsite_building = { type = industrial_complex level = 5 }
 					random_owned_controlled_state = {
 							limit = {
 									free_building_slots = {
@@ -2045,7 +2084,7 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 2
 						}
 					random_owned_controlled_state = {
 							limit = {
@@ -2070,7 +2109,7 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 2
 						}
 					random_owned_controlled_state = {
 							limit = {
@@ -2095,7 +2134,7 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 2
 						}
 				}
 				search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2105,7 +2144,7 @@ focus_tree = {
 	focus = {
 		id = SIA_develop_rubber_extraction
 		icon = GFX_focus_generic_rubber
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_mechanization_of_agriculture
 		}
@@ -2124,7 +2163,7 @@ focus_tree = {
 			724 = {
 				add_resource = {
 					type = rubber
-					amount = 12
+					amount = 50
 				}
 			}
 		}
@@ -2134,7 +2173,7 @@ focus_tree = {
 	focus = {
 		id = SIA_dig_for_tungsten
 		icon = GFX_focus_generic_tungsten
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_develop_rubber_extraction
 		}
@@ -2152,13 +2191,13 @@ focus_tree = {
 			289 = {
 				add_resource = {
 					type = tungsten
-					amount = 10
+					amount = 50
 				}
 			}
 			add_tech_bonus = {
 				name = excavation_tech_bonus_name
-				bonus = 1
-				uses = 1
+				bonus = 5.0
+				uses = 2
 				category = excavation_tech
 			}			
 		}
@@ -2168,7 +2207,7 @@ focus_tree = {
 	focus = {
 		id = SIA_improve_our_roads
 		icon = GFX_goal_generic_road
-		cost = 7
+		cost = 5
 		prerequisite = {
 			focus = SIA_end_the_depression
 		}
@@ -2179,14 +2218,14 @@ focus_tree = {
 					289 = {
 							add_building_construction = {
 									type = infrastructure
-									level = 2
+									level = 3
 									instant_build = yes
 								}
 						}
 					724 = {
 							add_building_construction = {
 									type = infrastructure
-									level = 2
+									level = 3
 									instant_build = yes
 								}
 						}
@@ -2198,7 +2237,7 @@ focus_tree = {
 	focus = {
 		id = SIA_begin_industrialisation_plans
 		icon = GFX_goal_generic_industrial_planning
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_improve_our_roads
 		}
@@ -2211,8 +2250,8 @@ focus_tree = {
 			completion_reward = {
 					add_tech_bonus = {
 							name = industrial_bonus
-							bonus = 1
-							uses = 2
+							bonus = 5.0
+							uses = 4
 							category = industry
 						}
 				}
@@ -2223,7 +2262,7 @@ focus_tree = {
 	focus = {
 		id = SIA_electrification_effort
 		icon = GFX_goal_generic_power_plant
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_begin_industrialisation_plans
 		}
@@ -2231,16 +2270,18 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_begin_industrialisation_plans
 			completion_reward = {
+					add_offsite_building = { type = industrial_complex level = 5 }
+					add_offsite_building = { type = fuel_silo level = 5 }
 					random_owned_controlled_state = {
-						add_extra_state_shared_building_slots = 2
+						add_extra_state_shared_building_slots = 4
 						add_building_construction = {
 							type = industrial_complex
-							level = 1
+							level = 3
 							instant_build = yes
 						}
 					}
 					random_owned_controlled_state = {
-							add_extra_state_shared_building_slots = 2
+							add_extra_state_shared_building_slots = 4
 						}
 				}
 				search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2250,7 +2291,7 @@ focus_tree = {
 	focus = {
 		id = SIA_cement_sector_improvement
 		icon = GFX_goal_generic_construction
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_improve_our_roads
 		}
@@ -2258,6 +2299,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_improve_our_roads
 			completion_reward = {
+					add_offsite_building = { type = industrial_complex level = 5 }
 					random_owned_controlled_state = {
 						limit = {
 							free_building_slots = {
@@ -2281,10 +2323,10 @@ focus_tree = {
 								}
 							}
 						}
-						add_extra_state_shared_building_slots = 2
+						add_extra_state_shared_building_slots = 4
 						add_building_construction = {
 							type = industrial_complex
-							level = 2
+							level = 3
 							instant_build = yes
 						}
 					}
@@ -2311,10 +2353,10 @@ focus_tree = {
 												}
 										}
 								}
-						add_extra_state_shared_building_slots = 1
+						add_extra_state_shared_building_slots = 4
 						add_building_construction = {
 								type = industrial_complex
-								level = 1
+								level = 3
 								instant_build = yes
 							}
 						}
@@ -2326,7 +2368,7 @@ focus_tree = {
 	focus = {
 		id = SIA_urbanisation_effort
 		icon = GFX_goal_generic_housing
-		cost = 8
+		cost = 5
 		prerequisite = {
 			focus = SIA_cement_sector_improvement
 		}
@@ -2346,7 +2388,7 @@ focus_tree = {
 	focus = {
 		id = SIA_ammunitions_production
 		icon = GFX_goal_ammunitions
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_urbanisation_effort
 		}
@@ -2357,6 +2399,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_electrification_effort
 			completion_reward = {
+					add_offsite_building = { type = aluminum_mill level = 10 }
+					add_resource = {
+						type = aluminum
+						amount = 15
+					}
 					random_owned_controlled_state = {
 							limit = {
 									free_building_slots = {
@@ -2380,10 +2427,10 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 4
 							add_building_construction = {
 									type = arms_factory
-									level = 1
+									level = 2
 									instant_build = yes
 								}
 						}
@@ -2410,10 +2457,10 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 4
 							add_building_construction = {
 									type = arms_factory
-									level = 1
+									level = 2
 									instant_build = yes
 								}
 						}
@@ -2425,7 +2472,7 @@ focus_tree = {
 	focus = {
 		id = SIA_artillery_factories
 		icon = GFX_goal_generic_munitions_factories
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_ammunitions_production
 		}
@@ -2436,6 +2483,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = SIA_dig_for_tungsten
 			completion_reward = {
+					add_offsite_building = { type = industrial_complex level = 5 }
 					add_ideas = SIA_artillery_factories
 					random_owned_controlled_state = {
 							limit = {
@@ -2460,10 +2508,10 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 2
 							add_building_construction = {
 									type = arms_factory
-									level = 1
+									level = 2
 									instant_build = yes
 								}
 						}
@@ -2490,10 +2538,10 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 2
 							add_building_construction = {
 									type = arms_factory
-									level = 1
+									level = 2
 									instant_build = yes
 								}
 						}
@@ -2505,7 +2553,7 @@ focus_tree = {
 	focus = {
 		id = SIA_establish_military_factories
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_ammunitions_production
 		}
@@ -2513,6 +2561,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_ammunitions_production
 			completion_reward = {
+					add_offsite_building = { type = arms_factory level = 10 }
 					random_owned_controlled_state = {
 							limit = {
 									free_building_slots = {
@@ -2536,10 +2585,10 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 4
 							add_building_construction = {
 									type = arms_factory
-									level = 1
+									level = 2
 									instant_build = yes
 								}
 						}
@@ -2566,10 +2615,10 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 4
 							add_building_construction = {
 									type = arms_factory
-									level = 1
+									level = 2
 									instant_build = yes
 								}
 						}
@@ -2581,7 +2630,7 @@ focus_tree = {
 	focus = {
 		id = SIA_state_sponsored_civilian_construction
 		icon = GFX_goal_generic_strenght_through_industry
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_urbanisation_effort
 		}
@@ -2592,6 +2641,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_urbanisation_effort
 			completion_reward = {
+					add_offsite_building = { type = industrial_complex level = 5 }
 					random_owned_controlled_state = {
 							limit = {
 									free_building_slots = {
@@ -2615,10 +2665,10 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 2
 							add_building_construction = {
 									type = industrial_complex
-									level = 1
+									level = 2
 									instant_build = yes
 								}
 						}
@@ -2645,10 +2695,10 @@ focus_tree = {
 												}
 										}
 								}
-							add_extra_state_shared_building_slots = 1
+							add_extra_state_shared_building_slots = 2
 							add_building_construction = {
 									type = industrial_complex
-									level = 1
+									level = 2
 									instant_build = yes
 								}
 						}
@@ -2660,7 +2710,7 @@ focus_tree = {
 	focus = {
 		id = SIA_increase_the_education_budget
 		icon = GFX_goal_generic_education
-		cost = 8
+		cost = 2
 		prerequisite = {
 			focus = SIA_end_the_depression
 		}
@@ -2668,6 +2718,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_end_the_depression
 			completion_reward = {
+					add_research_slot = 1
 					add_ideas = SIA_increased_education_budget
 				}
 				search_filters = { FOCUS_FILTER_RESEARCH }
@@ -2677,7 +2728,7 @@ focus_tree = {
 	focus = {
 		id = SIA_open_new_universities
 		icon = GFX_focus_research
-		cost = 10
+		cost = 4
 		prerequisite = {
 			focus = SIA_increase_the_education_budget
 		}
@@ -2688,7 +2739,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = SIA_increase_the_education_budget
 			completion_reward = {
-					add_research_slot = 1
+					add_research_slot = 2
 				}
 				search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -2697,7 +2748,7 @@ focus_tree = {
 	focus = {
 		id = SIA_electronic_research
 		icon = GFX_goal_generic_engineering
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_open_new_universities
 		}
@@ -2710,8 +2761,8 @@ focus_tree = {
 			completion_reward = {
 					add_tech_bonus = {
 						name = SIA_electronic_research
-							bonus = 1.0
-							uses = 2
+							bonus = 5.0
+							uses = 3
 							category = electronics
 						}
 				}
@@ -2726,11 +2777,12 @@ focus_tree = {
 	focus = {
 		id = SIA_naval_developement_plan
 		icon = GFX_goal_siamese_navy
-		cost = 10
+		cost = 5
 		x = 53
 		y = 0
 		completion_reward = {
-			navy_experience = 25
+			add_offsite_building = { type = dockyard level = 15 }
+			navy_experience = 200
 			if = {
 				limit = { has_dlc = "Man the Guns" }
 				create_equipment_variant = {
@@ -2769,7 +2821,7 @@ focus_tree = {
 	focus = {
 		id = SIA_reform_our_tactics
 		icon = GFX_goal_sea_navy
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_naval_developement_plan
 		}
@@ -2783,8 +2835,14 @@ focus_tree = {
 					add_tech_bonus = {
 							name = fleet_in_being_bonus
 							bonus = 1.0
-							uses = 2
+							uses = 4
 							category = fleet_in_being_tree
+						}
+					add_tech_bonus = {
+							name = fleet_in_being_bonus
+							bonus = 1.0
+							uses = 4
+							category = cat_fleet_in_being
 						}
 				}
 				search_filters = { FOCUS_FILTER_RESEARCH }
@@ -2794,7 +2852,7 @@ focus_tree = {
 	focus = {
 		id = SIA_modernise_our_battleships
 		icon = GFX_goal_generic_battleship
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_reform_our_tactics
 		}
@@ -2804,9 +2862,9 @@ focus_tree = {
 			completion_reward = {
 					add_tech_bonus = {
 							name = capital_ships_bonus
-							bonus = 1.0
+							bonus = 5.0
 							ahead_reduction = 2
-							uses = 1
+							uses = 4
 							category = bc_tech
 							category = bb_tech
 							category = cv_tech
@@ -2819,7 +2877,7 @@ focus_tree = {
 	focus = {
 		id = SIA_quality_over_quantity
 		icon = GFX_goal_generic_production
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_reform_our_tactics
 		}
@@ -2835,7 +2893,7 @@ focus_tree = {
 	focus = {
 		id = SIA_destroyers_effort
 		icon = GFX_goal_generic_navy_anti_submarine
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_quality_over_quantity
 		}
@@ -2848,9 +2906,9 @@ focus_tree = {
 			completion_reward = {
 					add_tech_bonus = {
 							name = dd_bonus
-							bonus = 1.0
+							bonus = 5.0
 							ahead_reduction = 2
-							uses = 1
+							uses = 2
 							category = dd_tech
 						}
 				}
@@ -2865,7 +2923,7 @@ focus_tree = {
 	focus = {
 		id = SIA_adopt_new_tactics
 		icon = GFX_goal_coastal_navy
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_naval_developement_plan
 		}
@@ -2878,7 +2936,7 @@ focus_tree = {
 			completion_reward = {
 				add_doctrine_cost_reduction = {
 					name = sub_op_bonus
-					cost_reduction = 0.5
+					cost_reduction = 1
 					uses = 2
 					category = submarine_doctrine
 				}
@@ -2890,7 +2948,7 @@ focus_tree = {
 	focus = {
 		id = SIA_study_submarines
 		icon = GFX_goal_generic_navy_submarine
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_adopt_new_tactics
 		}
@@ -2913,7 +2971,7 @@ focus_tree = {
 	focus = {
 		id = SIA_naval_mass_production
 		icon = GFX_focus_generic_shipbuilding
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_adopt_new_tactics
 		}
@@ -2930,7 +2988,7 @@ focus_tree = {
 	focus = {
 		id = SIA_develop_cruisers
 		icon = GFX_goal_generic_navy_cruiser
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_naval_mass_production
 		}
@@ -2943,9 +3001,9 @@ focus_tree = {
 			completion_reward = {
 					add_tech_bonus = {
 							name = cr_bonus
-							bonus = 1.0
+							bonus = 5.0
 							ahead_reduction = 2
-							uses = 1
+							uses = 2
 							category = cl_tech
 							category = ca_tech
 						}
@@ -2963,7 +3021,7 @@ focus_tree = {
 	focus = {
 		id = SIA_increase_the_naval_production
 		icon = GFX_goal_generic_expand_the_naval_industry
-		cost = 10
+		cost = 2
 		prerequisite = {
 			focus = SIA_reform_our_tactics
 			focus = SIA_adopt_new_tactics
@@ -2971,7 +3029,8 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SIA_naval_developement_plan
-			completion_reward = {
+			completion_reward = {t
+			add_offsite_building = { type = dockyard level = 10 }
 					if = {
 							limit = {
 									NOT = {
@@ -3072,7 +3131,7 @@ focus_tree = {
 	focus = {
 		id = SIA_naval_fortifications
 		icon = GFX_focus_generic_coastal_fort
-		cost = 10
+		cost = 2
 		prerequisite = {
 			focus = SIA_increase_the_naval_production
 		}
@@ -3088,7 +3147,7 @@ focus_tree = {
 	focus = {
 		id = SIA_increase_navy_fundings
 		icon = GFX_goal_navy_funding
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_increase_the_naval_production
 		}
@@ -3096,6 +3155,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_increase_the_naval_production
 			completion_reward = {
+				add_offsite_building = { type = dockyard level = 15 }
 					if = {
 							limit = {
 									NOT = {
@@ -3197,7 +3257,7 @@ focus_tree = {
 	focus = {
 		id = SIA_establish_a_naval_college
 		icon = GFX_goal_generic_naval_academy
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_increase_navy_fundings
 		}
@@ -3208,11 +3268,11 @@ focus_tree = {
 		y = 2
 		relative_position_id = SIA_increase_the_naval_production
 			completion_reward = {
-					navy_experience = 50
+					navy_experience = 200
 					add_doctrine_cost_reduction = {
 						name = land_doc_bonus
-						cost_reduction = 0.5
-						uses = 2
+						cost_reduction = 0.75
+						uses = 4
 						category = naval_doctrine
 					}
 				}
@@ -3229,18 +3289,19 @@ focus_tree = {
 	focus = {
 		id = SIA_army_reform_plan
 		icon = GFX_goal_siamese_army
-		cost = 10
+		cost = 5
 		x = 63
 		y = 0
 		ai_will_do = {
 			factor = 5
 		}
 		completion_reward = {
-			army_experience = 10
+			army_experience = 200
+			add_offsite_building = { type = arms_factory level = 10 }
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
+				cost_reduction = 0.75
+				uses = 4
 				category = land_doctrine
 			}
 		}
@@ -3251,7 +3312,7 @@ focus_tree = {
 	focus = {
 		id = SIA_listen_to_new_officers
 		icon = GFX_goal_wargaming
-		cost = 10
+		cost = 4
 		prerequisite = {
 			focus = SIA_army_reform_plan
 		}
@@ -3262,11 +3323,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_army_reform_plan
 		completion_reward = {
-			army_experience = 25
+			army_experience = 100
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
+				cost_reduction = 0.75
+				uses = 3
 				category = cat_mobile_warfare
 				category = cat_superior_firepower
 			}
@@ -3278,7 +3339,7 @@ focus_tree = {
 	focus = {
 		id = SIA_import_foreign_tanks
 		icon = GFX_goal_generic_army_tanks
-		cost = 10
+		cost = 4
 		prerequisite = {
 			focus = SIA_listen_to_new_officers
 		}
@@ -3288,8 +3349,8 @@ focus_tree = {
 			completion_reward = {
 					add_tech_bonus = {
 						name = armor_bonus
-						bonus = 1
-						uses = 1
+						bonus = 5.0
+						uses = 2
 						category = armor
 					}
 				}
@@ -3300,7 +3361,7 @@ focus_tree = {
 	focus = {
 		id = SIA_artillery_developement
 		icon = GFX_goal_generic_army_artillery
-		cost = 10
+		cost = 4
 		prerequisite = {
 			focus = SIA_listen_to_new_officers
 		}
@@ -3310,8 +3371,8 @@ focus_tree = {
 			completion_reward = {
 					add_tech_bonus = {
 						name = artillery_tech_bonus_name
-						bonus = 1
-						uses = 1
+						bonus = 5.0
+						uses = 3
 						category = artillery
 					}
 				}
@@ -3322,7 +3383,7 @@ focus_tree = {
 	focus = {
 		id = SIA_anti_tank_research
 		icon = GFX_goal_tank_hunt
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_import_foreign_tanks
 			focus = SIA_artillery_developement
@@ -3333,8 +3394,8 @@ focus_tree = {
 			completion_reward = {
 					add_tech_bonus = {
 						name = artillery_tech_bonus_name
-						bonus = 1
-						uses = 1
+						bonus = 5.0
+						uses = 2
 						category = cat_anti_tank
 					}
 				}
@@ -3345,7 +3406,7 @@ focus_tree = {
 	focus = {
 		id = SIA_national_mobilisation
 		icon = GFX_goal_generic_army_mobilization2
-		cost = 10
+		cost = 4
 		prerequisite = {
 			focus = SIA_listen_to_new_officers
 			focus = SIA_remembering_the_great_war
@@ -3354,17 +3415,16 @@ focus_tree = {
 		y = 2
 		relative_position_id = SIA_army_reform_plan
 			completion_reward = {
-					add_war_support = 0.1
+					add_war_support = 0.2
 					add_ideas = extensive_conscription
 				}
 				search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
-
 	}
 
 	focus = {
 		id = SIA_a_faster_army
 		icon = GFX_goal_generic_modernizing_the_cavalry
-		cost = 7
+		cost = 4
 		prerequisite = {
 			focus = SIA_artillery_developement
 		}
@@ -3377,7 +3437,7 @@ focus_tree = {
 			completion_reward = {
 					set_technology = {
 						tech_trucks = 1
-motorised_infantry = 1
+						motorised_infantry = 1
 					}
 				}
 				search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3387,7 +3447,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_a_canon_on_a_car
 		icon = GFX_goal_mechanized_offensive
-		cost = 7
+		cost = 4
 		prerequisite = {
 			focus = SIA_a_faster_army
 		}
@@ -3400,7 +3460,7 @@ motorised_infantry = 1
 			completion_reward = {
 					add_tech_bonus = {
 						name = motorized_bonus
-						bonus = 1
+						bonus = 5.0
 						uses = 1
 						category = cat_mechanized_equipment
 					}
@@ -3412,7 +3472,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_remembering_the_great_war
 		icon = GFX_goal_machine_gun
-		cost = 10
+		cost = 4
 		prerequisite = {
 			focus = SIA_army_reform_plan
 		}
@@ -3423,11 +3483,11 @@ motorised_infantry = 1
 		y = 1
 		relative_position_id = SIA_army_reform_plan
 		completion_reward = {
-			army_experience = 25
+			army_experience = 100
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
+				cost_reduction = 0.75
+				uses = 3
 				category = cat_grand_battle_plan
 				category = cat_mass_assault
 				category = cat_r56_guerilla_warfare
@@ -3440,7 +3500,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_new_rifles
 		icon = GFX_focus_secret_rearmament
-		cost = 7
+		cost = 4
 		prerequisite = {
 			focus = SIA_remembering_the_great_war
 		}
@@ -3450,8 +3510,8 @@ motorised_infantry = 1
 			completion_reward = {
 					add_tech_bonus = {
 						name = infantry_weapons_bonus
-						bonus = 1.0
-						uses = 1
+						bonus = 5.0
+						uses = 2
 						category = infantry_weapons
 					}
 				}
@@ -3462,7 +3522,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_improve_logistics
 		icon = GFX_goal_plan
-		cost = 7
+		cost = 4
 		prerequisite = {
 			focus = SIA_new_rifles
 		}
@@ -3476,7 +3536,7 @@ motorised_infantry = 1
 					add_ideas = SIA_improve_logistics
 					add_tech_bonus = {
 						name = secret_bonus
-						bonus = 1
+						bonus = 5.0
 						uses = 1
 						category = radar_tech
 					}
@@ -3488,7 +3548,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_improved_r_d
 		icon = GFX_goal_generic_military_research_2
-		cost = 10
+		cost = 4
 		prerequisite = {
 			focus = SIA_a_faster_army
 			focus = SIA_improve_logistics
@@ -3506,7 +3566,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_jungle_training
 		icon = GFX_goal_infantry_offensive
-		cost = 7
+		cost = 4
 		prerequisite = {
 			focus = SIA_remembering_the_great_war
 		}
@@ -3522,7 +3582,7 @@ motorised_infantry = 1
 			}
 			add_tech_bonus = {
 				name = special_forces_bonus
-				bonus = 1.0
+				bonus = 5.0
 				uses = 2
 				category = r56_special_forces_training_tech 
 			}				
@@ -3535,7 +3595,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_support_our_troops
 		icon = GFX_goal_defensive_position2
-		cost = 7
+		cost = 4
 		prerequisite = {
 			focus = SIA_new_rifles
 			focus = SIA_jungle_training
@@ -3546,14 +3606,14 @@ motorised_infantry = 1
 		completion_reward = {
 			add_tech_bonus = {
 				name = support_tech_bonus_name
-				bonus = 0.5
-				uses = 1
+				bonus = 5.0
+				uses = 2
 				category = support_tech
 			}
             add_tech_bonus = {
                 name = infantry_artillery_bonus
-                bonus = 1
-                uses = 1
+                bonus = 5.0
+                uses = 2
                 category = summer_clothing_tech
             } 				
 		}
@@ -3563,7 +3623,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_adapt_to_everything
 		icon = GFX_goal_generic_major_war
-		cost = 7
+		cost = 4
 		prerequisite = {
 			focus = SIA_improve_logistics
 		}
@@ -3596,11 +3656,12 @@ motorised_infantry = 1
 		x = 72
 		y = 0
 			completion_reward = {
-				air_experience = 25
+				air_experience = 200
+				add_offsite_building = { type = arms_factory level = 5 }
 				add_doctrine_cost_reduction = {
 					name = air_sup_bonus
-					cost_reduction = 0.5
-					uses = 2
+					cost_reduction = 0.75
+					uses = 4
 					category = air_doctrine
 			}
 		}
@@ -3609,7 +3670,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_rule_the_skies
 		icon = GFX_goal_generic_air_fighter
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_the_siamese_air_force
 		}
@@ -3622,10 +3683,11 @@ motorised_infantry = 1
 			completion_reward = {
 					add_tech_bonus = {
 						name = air_bonus
-							bonus = 1
-							uses = 1
+							bonus = 5.0
+							uses = 2
 							category = light_fighter
-						}
+							category = air_equipment
+							category = light_air
 				}
 				search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -3644,9 +3706,11 @@ motorised_infantry = 1
 			completion_reward = {
 					add_tech_bonus = {
 						name = air_bonus
-							bonus = 1
-							uses = 1
+							bonus = 5.0
+							uses = 2
 							category = cat_heavy_fighter
+							category = medium_air 
+							category = air_equipment
 						}
 				}
 				search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3656,7 +3720,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_death_from_the_skies
 		icon = GFX_goal_generic_air_bomber
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_the_siamese_air_force
 		}
@@ -3669,9 +3733,11 @@ motorised_infantry = 1
 		completion_reward = {
 			add_tech_bonus = {
 				name = air_bonus
-				bonus = 1
-				uses = 1
+				bonus = 5.0
+				uses = 2
 				category = tactical_bomber
+				category = heavy_air
+				category = air_equipment
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3680,7 +3746,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_establish_aviation_school
 		icon = GFX_focus_generic_military_academy
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_build_new_airports
 		}
@@ -3688,10 +3754,10 @@ motorised_infantry = 1
 		y = 2
 		relative_position_id = SIA_death_from_the_skies
 		completion_reward = {
-			air_experience = 25
+			air_experience = 100
 			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				cost_reduction = 0.35
+				cost_reduction = 0.50
 				uses = 2
 				category = air_doctrine
 			}
@@ -3702,7 +3768,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_troops_destruction
 		icon = GFX_goal_generic_air_CAS_new
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_death_from_the_skies
 		}
@@ -3712,9 +3778,11 @@ motorised_infantry = 1
 			completion_reward = {
 					add_tech_bonus = {
 						name = air_bonus
-							bonus = 1
+							bonus = 5.0
 							uses = 1
 							category = cas_bomber
+							category = heavy_air
+
 						}
 				}
 				search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3724,7 +3792,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_build_new_airports
 		icon = GFX_goal_generic_airport
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_death_from_the_skies
 			focus = SIA_rule_the_skies
@@ -3733,6 +3801,8 @@ motorised_infantry = 1
 		y = 2
 		relative_position_id = SIA_the_siamese_air_force
 			completion_reward = {
+				add_offsite_building = { type = fuel_silo level = 5 }
+				add_offsite_building = { type = arms_factory level = 5 }
 					if = {
 							limit = {
 									capital_scope = {
@@ -3783,7 +3853,7 @@ motorised_infantry = 1
 	focus = {
 		id = SIA_anti_air_protection
 		icon = GFX_focus_generic_air_defense
-		cost = 10
+		cost = 2
 		prerequisite = {
 			focus = SIA_build_new_airports
 		}
@@ -3827,3 +3897,4 @@ motorised_infantry = 1
 	# END OF AIR FORCE TREE
 }
 
+}

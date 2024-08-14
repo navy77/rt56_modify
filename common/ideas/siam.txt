@@ -70,7 +70,7 @@ ideas = {
 			
 			equipment_bonus = {
 			infantry_equipment = {
-				build_cost_ic = -0.075 instant = yes
+				build_cost_ic = -0.5 instant = yes
 			}
 		}
 			
@@ -102,8 +102,8 @@ ideas = {
 			}
 			
 			modifier = {
-					communism_drift = 0.03
-					research_speed_factor = 0.03
+					communism_drift = 0.1
+					research_speed_factor = 0.25
 			}
 			
 		}
@@ -123,8 +123,8 @@ ideas = {
 			picture = generic_research_bonus
 			
 			modifier = {
-				attrition = -0.25
-				MONTHLY_POPULATION = 0.5
+				attrition = -0.50
+				MONTHLY_POPULATION = 0.75
 			}
 			
 		}
@@ -144,8 +144,8 @@ ideas = {
 			picture = generic_research_bonus
 			
 			modifier = {
-				justify_war_goal_time = -0.30
-				army_attack_factor = 0.05
+				justify_war_goal_time = -0.80
+				army_attack_factor = 0.10
 			}
 			
 		}
@@ -165,7 +165,14 @@ ideas = {
 			picture = generic_communist_army
 			
 			modifier = {
-				army_morale_factor = 0.1
+				weekly_manpower = 3000
+				army_leader_cost_factor = -0.50
+				army_leader_start_level = 3
+				conscription_factor = 0.15
+				army_fuel_consumption_factor = -0.2
+				navy_fuel_consumption_factor = -0.2
+				air_fuel_consumption_factor = -0.2
+				army_morale_factor = 0.2
 				encryption_factor = 0.5
 			}
 			
@@ -187,7 +194,7 @@ ideas = {
 			
 			modifier = {
 				drift_defence_factor = 0.25
-				army_org_factor = 0.05
+				army_org_factor = 0.1
 			}
 			
 		}
@@ -207,8 +214,8 @@ ideas = {
 			picture = communist_industry
 			
 			modifier = {
-				production_factory_max_efficiency_factor = 0.1
-				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.5
+				consumer_goods_factor = -0.30
 			}
 			
 		}
@@ -279,7 +286,7 @@ ideas = {
 			picture = generic_research_bonus
 			
 			modifier = {
-				research_speed_factor = 0.03
+				research_speed_factor = 0.35
 			}
 			
 		}
@@ -299,7 +306,7 @@ ideas = {
 			picture = generic_navy_bonus
 			
 			modifier = {
-				industrial_capacity_dockyard = 0.1
+				industrial_capacity_dockyard = 10.0
 			}
 			
 		}
@@ -320,7 +327,7 @@ ideas = {
 			
 				equipment_bonus = {
 				artillery = {
-					build_cost_ic = -0.05
+					build_cost_ic = -0.2
 					instant = yes
 				}
 			
@@ -343,9 +350,9 @@ ideas = {
 			picture = generic_coastal_navy
 			
 			modifier = {
-				naval_hit_chance = 0.05
-				spotting_chance = 0.1
-				navy_max_range_factor = 0.05
+				naval_hit_chance = 0.15
+				spotting_chance = 0.2
+				navy_max_range_factor = 0.25
 			}
 			
 		}
@@ -365,8 +372,16 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				industrial_capacity_factory = 0.1
-				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 1.0
+				industrial_capacity_dockyard = 20.0
+				production_factory_max_efficiency_factor = 0.75
+				line_change_production_efficiency_factor = 0.75
+				production_factory_efficiency_gain_factor = 0.75
+				production_factory_start_efficiency_factor = 0.75
+
+				local_resources_factor = 0.2
+				production_speed_buildings_factor = 0.75
+				consumer_goods_factor = -0.2
 			}
 			
 		}
@@ -386,8 +401,11 @@ ideas = {
 			picture = FRA_scw_intervention_nationalists_focus
 			
 			modifier = {
-				justify_war_goal_time = -0.20
-				army_morale_factor = 0.05
+				justify_war_goal_time = -0.80
+				army_morale_factor = 0.1
+				weekly_manpower = 3000
+				conscription_factor = 0.15
+				training_time_factor = -0.1
 			}
 			
 		}
@@ -407,9 +425,11 @@ ideas = {
 			picture = FRA_scw_intervention_nationalists_focus
 			
 			modifier = {
-				justify_war_goal_time = -0.20
-				army_morale_factor = 0.10
-				training_time_factor = -0.1
+				justify_war_goal_time = -0.80
+				army_morale_factor = 0.20
+				training_time_factor = -0.2
+				weekly_manpower = 5000
+				conscription_factor = 0.30
 			}
 			
 		}
@@ -429,8 +449,9 @@ ideas = {
 			picture = FRA_scw_intervention_republicans_focus
 			
 			modifier = {
-				political_power_factor = 0.20
-				resistance_damage_to_garrison_on_our_occupied_states = 0.2
+				political_power_factor = 0.50
+				resistance_damage_to_garrison_on_our_occupied_states = 0.5
+				stability_factor = 0.1
 			}
 			
 		}
@@ -567,8 +588,8 @@ ideas = {
 			picture = generic_volunteer_expedition_bonus
 			
 			modifier = {
-				army_core_defence_factor = 0.1
-				conscription = 0.02
+				army_core_defence_factor = 0.20
+				conscription = 0.1
 			}
 			
 		}
@@ -631,7 +652,7 @@ ideas = {
 			picture = CZE_planning_bonus
 			
 			modifier = {
-				production_speed_coastal_bunker_factor = 0.25
+				production_speed_coastal_bunker_factor = 2.0
 			}
 			
 		}
@@ -652,6 +673,8 @@ ideas = {
 			
 			modifier = {
 				attrition = -0.1
+				
+				transport_capacity = 0.5
 			}
 			
 		}
@@ -694,8 +717,8 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.1
-				production_factory_max_efficiency_factor = 0.1
-				line_change_production_efficiency_factor = 0.15
+				production_factory_max_efficiency_factor = 0.40
+				line_change_production_efficiency_factor = 0.50
 			}
 			
 		}
@@ -715,7 +738,7 @@ ideas = {
 			picture = generic_intel_bonus
 			
 			modifier = {
-					political_power_gain = 0.25
+					political_power_gain = 0.50
 			}
 			
 		}
@@ -735,8 +758,8 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			
 			modifier = {
-					conscription = 0.02
-					line_change_production_efficiency_factor = 0.15
+					conscription = 0.1
+					line_change_production_efficiency_factor = 0.30
 			}
 			
 		}
@@ -757,7 +780,7 @@ ideas = {
 			
 			modifier = {
 				industrial_capacity_factory = -0.1
-				local_resources_factor = -0.15
+				local_resources_factor = -0.30
 				conscription_factor = -0.1
 			}
 			
@@ -938,9 +961,13 @@ ideas = {
 			picture = generic_artistic_propaganda
 			
 			modifier = {
-				conscription = 0.005
+				conscription = 0.05
+				war_support_factor = 0.2
+				stability_factor = 0.2
 				army_core_attack_factor = 0.04
 				army_core_defence_factor = 0.04
+				fascism_drift = 0.1
+				weekly_manpower = 2000
 			}
 			
 		}
@@ -960,8 +987,13 @@ ideas = {
 			picture = FRA_scw_intervention_republicans_focus
 			
 			modifier = {
-			army_morale_factor = 0.1
-			army_org_factor = 0.05
+			army_morale_factor = 0.2
+			army_org_factor = 0.10
+			army_leader_cost_factor = -0.50
+			army_fuel_consumption_factor = -0.2
+			navy_fuel_consumption_factor = -0.2
+			air_fuel_consumption_factor = -0.2
+
 			}
 			
 		}
@@ -981,9 +1013,12 @@ ideas = {
 			picture = FRA_scw_intervention_republicans_focus
 			
 			modifier = {
-				army_core_attack_factor = 0.1
+				army_core_attack_factor = 0.15
 				army_morale_factor = 0.1
-				political_power_factor = 0.15
+				political_power_factor = 0.30
+				army_fuel_consumption_factor = -0.1
+				navy_fuel_consumption_factor = -0.1
+				air_fuel_consumption_factor = -0.1
 			}
 			
 		}
@@ -1004,10 +1039,13 @@ ideas = {
 			
 			modifier = {
 				conscription_factor = 0.2
-				max_planning = 0.15
-				army_core_attack_factor = 0.1
+				max_planning = 0.30
+				army_core_attack_factor = 0.2
 				army_morale_factor = 0.15
-				political_power_factor = 0.25
+				political_power_factor = 0.35
+				army_fuel_consumption_factor = -0.15
+				navy_fuel_consumption_factor = -0.15
+				air_fuel_consumption_factor = -0.15
 			}
 			
 		}
@@ -1027,9 +1065,74 @@ ideas = {
 			picture = generic_manpower_bonus
 			
 			modifier = {
-				conscription = 0.02
+				conscription = 0.5
+				weekly_manpower = 1500
+			}
+			
+		}
+
+		SIA_Resource_More = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_research_bonus
+			
+			modifier = {
+				local_resources_factor = 0.25
+				production_speed_buildings_factor = 1.0
+				consumer_goods_factor = -0.25
+				research_speed_factor = 0.1
+			}
+			
+		}
+		SIA_AgencyTH = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = new_deal
+			
+			modifier = {
+				intel_network_gain_factor = 1.0
+				subversive_activites_upkeep = -0.25
+				foreign_subversive_activites = -0.33
+				agency_upgrade_time = -0.75
+				operative_slot = 6
+
+				boost_ideology_mission_factor = 0.5
+				boost_resistance_mission_factor = 0.5
+				control_trade_mission_factor = 0.5
+				diplomatic_pressure_mission = 0.5
+				propaganda_mission = 0.5
+				root_out_resistance_effectiveness = 0.5
+				commando_trait_chance_factor = 0.5
+				own_operative_detection_chance_factor = 0.75
+				own_operative_capture_chance_factor = 0.75
+
+				operation_steal_tech_navy_outcome = 0.75
+				operation_steal_tech_airforce_outcom = 0.75
+				operation_steal_tech_civilian_outcome = 0.75
+				operation_coup_government_outcome = 0.75
+				operation_boost_resistance_outcome = 0.75
 			}
 			
 		}
 	}
 }
+
+
