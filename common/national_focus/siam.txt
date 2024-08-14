@@ -1766,25 +1766,40 @@ focus_tree = {
 			create_wargoal = {
 				type = take_core_state
 				target = FRI
-				generator = { 670 926 924 925 741 286 671}
+				generator = { 926 670 671 928 927 925 286 741 } 
 			}
 			create_wargoal = {
 				type = take_core_state
 				target = ENG
 				generator = { 336 }
 			}
+			create_wargoal = {
+				type = take_core_state
+				target = MAL 
+				generator = { 915 960 333}
+			}
+			create_wargoal = {
+				type = take_core_state
+				target = RAJ 
+				generator = { 1020 640 1018}
+			}
 
-			add_state_core = 670
 			add_state_core = 926
-
-			add_state_core = 924
-			add_state_core = 925
-			add_state_core = 741
-
-			add_state_core = 286
+			add_state_core = 670
 			add_state_core = 671
+			add_state_core = 928
+			add_state_core = 927
+			add_state_core = 925
+			add_state_core = 286
+			add_state_core = 741
+			add_state_core = 915
+			add_state_core = 960
+			add_state_core = 333
+			add_state_core = 1020
 
-			add_state_core = 336
+			add_state_core = 1020
+			add_state_core = 640
+			add_state_core = 1018
 
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
