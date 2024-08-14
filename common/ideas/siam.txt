@@ -1121,8 +1121,8 @@ ideas = {
 				propaganda_mission = 0.5
 				root_out_resistance_effectiveness = 0.5
 				commando_trait_chance_factor = 0.5
-				own_operative_detection_chance_factor = 0.75
-				own_operative_capture_chance_factor = 0.75
+				own_operative_detection_chance_factor = -0.75
+				own_operative_capture_chance_factor = -0.75
 
 				operation_steal_tech_navy_outcome = 0.75
 				operation_steal_tech_airforce_outcom = 0.75
