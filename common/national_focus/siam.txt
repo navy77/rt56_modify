@@ -93,7 +93,7 @@ focus_tree = {
 					has_country_flag = SIA_communist_victory
 				}
 			completion_reward = {
-					add_political_power = 250
+					add_political_power = 300
 				}
 				search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -2270,6 +2270,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_begin_industrialisation_plans
 			completion_reward = {
+					add_tech_bonus = {
+							name = electronics_bonus
+							bonus = 5.0
+							uses = 2
+							category = electronics
+						}
 					add_offsite_building = { type = industrial_complex level = 5 }
 					add_offsite_building = { type = fuel_silo level = 5 }
 					random_owned_controlled_state = {
@@ -2299,6 +2305,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_improve_our_roads
 			completion_reward = {
+					add_tech_bonus = {
+							name = construction_bonus
+							bonus = 5.0
+							uses = 2
+							category = construction_tech
+						}
 					add_offsite_building = { type = industrial_complex level = 5 }
 					random_owned_controlled_state = {
 						limit = {
@@ -2379,6 +2391,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_cement_sector_improvement
 			completion_reward = {
+					add_tech_bonus = {
+							name = steel_mill_bonus
+							bonus = 5.0
+							uses = 1
+							category = steel_tech
+						}
 					add_ideas = SIA_urbanisation_effort
 				}
 				search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2399,6 +2417,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_electrification_effort
 			completion_reward = {
+					add_tech_bonus = {
+							name = aluminum_mill_bonus
+							bonus = 5.0
+							uses = 1
+							category = aluminium_tech
+						}
 					add_offsite_building = { type = aluminum_mill level = 10 }
 					add_resource = {
 						type = aluminum
@@ -2483,6 +2507,11 @@ focus_tree = {
 		y = 2
 		relative_position_id = SIA_dig_for_tungsten
 			completion_reward = {
+				add_tech_bonus = {
+					bonus = 5.0
+					uses = 2
+					category = artillery 
+				}
 					add_offsite_building = { type = industrial_complex level = 5 }
 					add_ideas = SIA_artillery_factories
 					random_owned_controlled_state = {
@@ -2641,7 +2670,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = SIA_urbanisation_effort
 			completion_reward = {
-					add_offsite_building = { type = industrial_complex level = 5 }
+					add_offsite_building = { type = industrial_complex level = 10 }
 					random_owned_controlled_state = {
 							limit = {
 									free_building_slots = {
@@ -2762,7 +2791,7 @@ focus_tree = {
 					add_tech_bonus = {
 						name = SIA_electronic_research
 							bonus = 5.0
-							uses = 3
+							uses = 2
 							category = electronics
 						}
 				}
@@ -2778,11 +2807,27 @@ focus_tree = {
 		id = SIA_naval_developement_plan
 		icon = GFX_goal_siamese_navy
 		cost = 5
-		x = 53
+		x = 4
 		y = 0
 		completion_reward = {
 			add_offsite_building = { type = dockyard level = 15 }
 			navy_experience = 200
+
+			add_tech_bonus = {
+					name = equipment_bonus
+					bonus = 5.0
+					ahead_reduction = 1
+					uses = 5
+					category = naval_equipment
+			modifier = {
+				special_forces_training_time_factor = -0.50
+				marines_special_forces_contribution_factor = -0.50
+				special_forces_no_supply_grace = 240
+				transport_capacity = 0.5
+				naval_invasion_prep_speed = 0.5
+				invasion_preparation = 0.5
+			}
+				}
 			if = {
 				limit = { has_dlc = "Man the Guns" }
 				create_equipment_variant = {
@@ -2821,26 +2866,24 @@ focus_tree = {
 	focus = {
 		id = SIA_reform_our_tactics
 		icon = GFX_goal_sea_navy
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_naval_developement_plan
 		}
-		mutually_exclusive = {
-			focus = SIA_adopt_new_tactics
-		}
+
 		x = -3
 		y = 1
 		relative_position_id = SIA_naval_developement_plan
 			completion_reward = {
 					add_tech_bonus = {
 							name = fleet_in_being_bonus
-							bonus = 1.0
+							bonus = 0.75
 							uses = 4
 							category = fleet_in_being_tree
 						}
 					add_tech_bonus = {
-							name = fleet_in_being_bonus
-							bonus = 1.0
+							name = cat_fleet_in_being
+							bonus = 0.75
 							uses = 4
 							category = cat_fleet_in_being
 						}
@@ -2852,7 +2895,7 @@ focus_tree = {
 	focus = {
 		id = SIA_modernise_our_battleships
 		icon = GFX_goal_generic_battleship
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_reform_our_tactics
 		}
@@ -2877,7 +2920,7 @@ focus_tree = {
 	focus = {
 		id = SIA_quality_over_quantity
 		icon = GFX_goal_generic_production
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_reform_our_tactics
 		}
@@ -2893,7 +2936,7 @@ focus_tree = {
 	focus = {
 		id = SIA_destroyers_effort
 		icon = GFX_goal_generic_navy_anti_submarine
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_quality_over_quantity
 		}
@@ -2923,13 +2966,11 @@ focus_tree = {
 	focus = {
 		id = SIA_adopt_new_tactics
 		icon = GFX_goal_coastal_navy
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_naval_developement_plan
 		}
-		mutually_exclusive = {
-			focus = SIA_reform_our_tactics
-		}
+
 		x = 3
 		y = 1
 		relative_position_id = SIA_naval_developement_plan
@@ -2948,7 +2989,7 @@ focus_tree = {
 	focus = {
 		id = SIA_study_submarines
 		icon = GFX_goal_generic_navy_submarine
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_adopt_new_tactics
 		}
@@ -2971,7 +3012,7 @@ focus_tree = {
 	focus = {
 		id = SIA_naval_mass_production
 		icon = GFX_focus_generic_shipbuilding
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_adopt_new_tactics
 		}
@@ -2988,7 +3029,7 @@ focus_tree = {
 	focus = {
 		id = SIA_develop_cruisers
 		icon = GFX_goal_generic_navy_cruiser
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_naval_mass_production
 		}
@@ -3029,7 +3070,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SIA_naval_developement_plan
-			completion_reward = {t
+			completion_reward = {
 			add_offsite_building = { type = dockyard level = 10 }
 					if = {
 							limit = {
@@ -3147,7 +3188,7 @@ focus_tree = {
 	focus = {
 		id = SIA_increase_navy_fundings
 		icon = GFX_goal_navy_funding
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_increase_the_naval_production
 		}
@@ -3257,7 +3298,7 @@ focus_tree = {
 	focus = {
 		id = SIA_establish_a_naval_college
 		icon = GFX_goal_generic_naval_academy
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_increase_navy_fundings
 		}
@@ -3289,7 +3330,7 @@ focus_tree = {
 	focus = {
 		id = SIA_army_reform_plan
 		icon = GFX_goal_siamese_army
-		cost = 5
+		cost = 4
 		x = 63
 		y = 0
 		ai_will_do = {
@@ -3316,9 +3357,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SIA_army_reform_plan
 		}
-		mutually_exclusive = {
-			focus = SIA_remembering_the_great_war
-		}
+
 		x = -3
 		y = 1
 		relative_position_id = SIA_army_reform_plan
@@ -3476,9 +3515,7 @@ focus_tree = {
 		prerequisite = {
 			focus = SIA_army_reform_plan
 		}
-		mutually_exclusive = {
-			focus = SIA_listen_to_new_officers
-		}
+
 		x = 3
 		y = 1
 		relative_position_id = SIA_army_reform_plan
@@ -3511,7 +3548,7 @@ focus_tree = {
 					add_tech_bonus = {
 						name = infantry_weapons_bonus
 						bonus = 5.0
-						uses = 2
+						uses = 3
 						category = infantry_weapons
 					}
 				}
@@ -3652,12 +3689,18 @@ focus_tree = {
 	focus = {
 		id = SIA_the_siamese_air_force
 		icon = GFX_goal_siamese_air_force
-		cost = 10
+		cost = 4
 		x = 72
 		y = 0
 			completion_reward = {
 				air_experience = 200
 				add_offsite_building = { type = arms_factory level = 5 }
+				add_offsite_building = { type = fuel_silo level = 5 }
+				add_tech_bonus = {
+					bonus = 5.0
+					uses = 4
+					category = air_equipment 
+				}
 				add_doctrine_cost_reduction = {
 					name = air_sup_bonus
 					cost_reduction = 0.75
@@ -3670,13 +3713,11 @@ focus_tree = {
 	focus = {
 		id = SIA_rule_the_skies
 		icon = GFX_goal_generic_air_fighter
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_the_siamese_air_force
 		}
-		mutually_exclusive = {
-			focus = SIA_death_from_the_skies
-		}
+
 		x = -2
 		y = 1
 		relative_position_id = SIA_the_siamese_air_force
@@ -3696,7 +3737,7 @@ focus_tree = {
 	focus = {
 		id = SIA_long_range_fighters
 		icon = GFX_goal_generic_air_heavy_fighter2_new
-		cost = 10
+		cost = 4
 		prerequisite = {
 			focus = SIA_rule_the_skies
 		}
@@ -3709,8 +3750,7 @@ focus_tree = {
 							bonus = 5.0
 							uses = 2
 							category = cat_heavy_fighter
-							category = medium_air 
-							category = air_equipment
+							category = medium_air
 						}
 				}
 				search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3720,13 +3760,11 @@ focus_tree = {
 	focus = {
 		id = SIA_death_from_the_skies
 		icon = GFX_goal_generic_air_bomber
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_the_siamese_air_force
 		}
-		mutually_exclusive = {
-			focus = SIA_rule_the_skies
-		}
+
 		x = 2
 		y = 1
 		relative_position_id = SIA_the_siamese_air_force
@@ -3737,7 +3775,7 @@ focus_tree = {
 				uses = 2
 				category = tactical_bomber
 				category = heavy_air
-				category = air_equipment
+
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3746,7 +3784,7 @@ focus_tree = {
 	focus = {
 		id = SIA_establish_aviation_school
 		icon = GFX_focus_generic_military_academy
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_build_new_airports
 		}
@@ -3755,6 +3793,7 @@ focus_tree = {
 		relative_position_id = SIA_death_from_the_skies
 		completion_reward = {
 			air_experience = 100
+
 			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
 				cost_reduction = 0.50
@@ -3768,7 +3807,7 @@ focus_tree = {
 	focus = {
 		id = SIA_troops_destruction
 		icon = GFX_goal_generic_air_CAS_new
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_death_from_the_skies
 		}
@@ -3779,7 +3818,7 @@ focus_tree = {
 					add_tech_bonus = {
 						name = air_bonus
 							bonus = 5.0
-							uses = 1
+							uses = 2
 							category = cas_bomber
 							category = heavy_air
 
@@ -3792,7 +3831,7 @@ focus_tree = {
 	focus = {
 		id = SIA_build_new_airports
 		icon = GFX_goal_generic_airport
-		cost = 5
+		cost = 4
 		prerequisite = {
 			focus = SIA_death_from_the_skies
 			focus = SIA_rule_the_skies
@@ -3823,7 +3862,7 @@ focus_tree = {
 										}
 									add_building_construction = {
 											type = air_base
-											level = 2
+											level = 5
 											instant_build = yes
 										}
 								}
@@ -3840,7 +3879,7 @@ focus_tree = {
 							capital_scope = {
 									add_building_construction = {
 											type = air_base
-											level = 2
+											level = 5
 											instant_build = yes
 										}
 								}
@@ -3867,12 +3906,12 @@ focus_tree = {
 				limit = {
 					free_building_slots = {
 						building = anti_air_building
-						size > 1
+						size > 3
 					}
 				}
 				add_building_construction = {
 					type = anti_air_building
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				
@@ -3887,7 +3926,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = anti_air_building
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
